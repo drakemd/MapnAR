@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MapnAR</string>
+    <string name="action_settings">Settings</string>
+    <string name="xAxis">X Axis:</string>
+    <string name="yAxis">Y Axis:</string>
+    <string name="zAxis">Z Axis:</string>
+    <string name="heading">Heading:</string>
+    <string name="pitch">Pitch:</string>
+    <string name="roll">Roll:</string>
+    <string name="altitude">Altitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="empty"></string>
+    <string name="help">This is the example app from Chapter 6 of Pro
+    Android Augmented Reality. This app outlines some of the basic features of
+    Augmented Reality and how to implement them in real world applications.</string>
+    <string name="helpLabel">Help</string>
+    <string name="title_activity_maps_view">Map</string>
+</resources>
