@@ -143,12 +143,40 @@
         android:layout_alignBottom="@+id/altitudeLabel"
         android:layout_alignLeft="@+id/longitudeValue"
         android:text="@string/empty" />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/altitudeLabel"
+        android:layout_below="@+id/altitudeLabel"
+        android:text="@string/bearingLabel" />
+    <TextView
+        android:id="@+id/bearingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/altitudeValue"
+        android:layout_below="@+id/altitudeValue"
+        android:text="@string/empty" />
+    <TextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="@string/distanceLabel" />
+    <TextView
+        android:id="@+id/distanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/distanceLabel"
+        android:layout_alignLeft="@+id/bearingValue"
+        android:text="@string/empty" />
     <Button
         android:id="@+id/helpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/altitudeLabel"
-        android:layout_below="@+id/altitudeValue"
-        android:layout_marginTop="15dp"
-        android:text="@string/helpLabel" />
+        android:layout_marginTop="17dp"
+        android:text="@string/helpLabel"
+        android:layout_below="@+id/distanceLabel"
+        android:layout_alignStart="@+id/distanceLabel" />
 </RelativeLayout>

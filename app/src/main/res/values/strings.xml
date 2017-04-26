@@ -16,4 +16,6 @@
     Augmented Reality and how to implement them in real world applications.</string>
     <string name="helpLabel">Help</string>
     <string name="title_activity_maps_view">Map</string>
+    <string name="bearingLabel">Bearing:</string>
+    <string name="distanceLabel">Distance:</string>
 </resources>

@@ -70,6 +70,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
     private GoogleApiClient mGoogleApiClient;
     private Location mLastLocation;
     private LocationRequest mLocationRequest;
+    double bearing;
+    double distance;
+    float lat;
+    float lon;
+    Location setLoc;
+    Location locationInUse;
+    TextView bearingValue;
+    TextView distanceValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +86,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         if (checkGooglePlayServices()) {
             buildGoogleApiClient();
         }
+        setLoc = new Location("");
+        setLoc.setLatitude(-6.859894);
+        setLoc.setLongitude(107.590003);
         createLocationRequest();
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         orientationSensor = Sensor.TYPE_ORIENTATION;
@@ -100,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         altitudeValue = (TextView) findViewById(R.id.altitudeValue);
         longitudeValue = (TextView) findViewById(R.id.longitudeValue);
         latitudeValue = (TextView) findViewById(R.id.latitudeValue);
+        bearingValue = (TextView) findViewById(R.id.bearingValue);
+        distanceValue = (TextView) findViewById(R.id.distanceValue);
         button = (Button) findViewById(R.id.helpButton);
         button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -374,6 +387,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
             latitudeValue.setText(String.valueOf(latitude));
             longitudeValue.setText(String.valueOf(longitude));
             altitudeValue.setText(String.valueOf(altitude));
+            bearing = mLastLocation.bearingTo(setLoc);
+            distance = mLastLocation.distanceTo(setLoc);
+            bearingValue.setText(String.valueOf(bearing));
+            distanceValue.setText(String.valueOf(distance));
         }
         startLocationUpdates();
     }
@@ -408,5 +425,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         latitudeValue.setText(String.valueOf(latitude));
         longitudeValue.setText(String.valueOf(longitude));
         altitudeValue.setText(String.valueOf(altitude));
+        bearing = mLastLocation.bearingTo(setLoc);
+        distance = mLastLocation.distanceTo(setLoc);
+        bearingValue.setText(String.valueOf(bearing));
+        distanceValue.setText(String.valueOf(distance));
     }
 }
